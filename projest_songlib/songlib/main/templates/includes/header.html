@@ -1,10 +1,23 @@
+<!-- templates/includes/header.html -->
 <div class="header">
-    <h1>Мой сайт</h1>
-    <nav>
-        <ul>
-            <li><a href="{% url 'home' %}">Главная</a></li>
-            <li><a href="{% url 'about' %}">О нас</a></li>
-            <li><a href="{% url 'contact' %}">Контакты</a></li>
-        </ul>
-    </nav>
+    <div class="header-left">
+        <h1>SongLib</h1>
+    </div>
+    {% if request.path == '/' %}
+    <div class="header-center">
+        <form action="{% url 'search' %}" method="get" class="search-form">
+            <input type="text" name="q" placeholder="Search..." class="search-input">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+    {% endif %}
+    <div class="header-right">
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Main</a></li>
+                <li><a href="{% url 'about' %}">Favorites</a></li>
+                <li><a href="{% url 'contact' %}">Load song</a></li>
+            </ul>
+        </nav>
+    </div>
 </div>
