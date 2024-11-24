@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}О нас{% endblock %}
+{% block title %}Favorites{% endblock %}
 
 {% block content %}
 <h1>Favorites</h1>
-<p>This is the content of page "Favorites".</p>
+<div class="favorite-list">
+    {% for favorite in favorites %}
+    <div class="favorite-item">
+        <a href="{% url 'file_detail' favorite.file.id %}">{{ favorite.file.title }}</a>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

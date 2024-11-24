@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}Контакты{% endblock %}
+{% block title %}Load song{% endblock %}
 
 {% block content %}
 <h1>Load song</h1>
-<p>This is the content of page "Load song".</p>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
 {% endblock %}

@@ -93,3 +93,25 @@ body {
     font-weight: 400;
     word-wrap: break-word;
 }
+
+/* myapp/static/css/styles.css */
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота экрана */
+    text-align: center;
+}
+
+.centered-form form {
+    width: 300px; /* Ширина формы */
+}
+
+.centered-form h1 {
+    margin-bottom: 20px;
+}
+
+.centered-form button {
+    margin-top: 10px;
+}
