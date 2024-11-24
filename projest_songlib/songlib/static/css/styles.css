@@ -1,4 +1,6 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -52,20 +54,20 @@ body {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 200px;
+    width: 400px; /* Увеличенная ширина поля для поиска */
 }
 
 .search-button {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #534675;
+    background-color: #524574;
     color: white;
     cursor: pointer;
 }
 
 .search-button:hover {
-    background-color: #382f4e;
+    background-color: #302944;
 }
 
 .footer {
@@ -81,4 +83,13 @@ body {
 .content {
     padding: 20px;
     margin-bottom: 60px; /* Учитываем высоту футера */
+}
+
+.header-left h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Kumar One', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
 }
